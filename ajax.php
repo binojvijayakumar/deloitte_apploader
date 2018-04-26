@@ -19,7 +19,7 @@ function addEmptyEntry()
         $json = json_decode($data, true);        
     }
     else {
-        $json = [];
+        $json = array('id' => '', 'display'=>'', 'url'=>'', 'data'=>'');
     }    
     array_push($json,[]);
     file_put_contents ("formdata.json",json_encode($json));
