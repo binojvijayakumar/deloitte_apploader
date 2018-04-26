@@ -21,7 +21,7 @@ function addEmptyEntry()
     else {
         $json = array('id' => '', 'display'=>'', 'url'=>'', 'data'=>'');
     }    
-    array_push($json,[]);
+    array_push($json, array('id' => '', 'display'=>'', 'url'=>'', 'data'=>''));
     file_put_contents ("formdata.json",json_encode($json));
     return true;
 }
