@@ -99,10 +99,7 @@ $('.txtFilter').keyup(function (e) {
     $.each(formDetailsJSON, function (i, v) {
         if (!v.display) return true;
         if (v.display.match(filterValPattern)) {
-            $('#comboForms').append($('<option>', {
-                text: v.display,
-                value: JSON.stringify(v)
-            }));
+            setFormSelectCombo(v);
         }
     });
 });
@@ -121,11 +118,15 @@ function fetchFormJSON() {
     }, function (data, textStatus, jqXHR) {
         formDetailsJSON = data;
         $.each(data, function (i, v) {
-            $('#comboForms').append($('<option>', {
-                text: v.display,
-                value: JSON.stringify(v)
-            }));
+            setFormSelectCombo(v);
         });
     });
+}
+
+function setFormSelectCombo(v) {
+    $('#comboForms').append($('<option>', {
+        text: v.display,
+        value: JSON.stringify(v)
+    }));
 }
 //#endregion
