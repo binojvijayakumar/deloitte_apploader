@@ -94,7 +94,7 @@ $('.txtFilter').keyup(function (e) {
     $('#comboForms').html('');
     $('#comboForms').append($('<option>', {
         value: 0,
-        text: 'Select'
+        text: 'Select Form'
     }));
     $.each(formDetailsJSON, function (i, v) {
         if (!v.display) return true;
@@ -111,7 +111,7 @@ function fetchFormJSON() {
     $('#comboForms').html('');
     $('#comboForms').append($('<option>', {
         value: 0,
-        text: 'Select'
+        text: 'Select Form'
     }));
     $.getJSON("formdata.json", {
         _: new Date().getTime()
