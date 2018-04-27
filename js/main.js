@@ -116,7 +116,9 @@ function fetchFormJSON() {
         value: 0,
         text: 'Select'
     }));
-    $.getJSON("formdata.json", function (data, textStatus, jqXHR) {
+    $.getJSON("formdata.json", {
+        _: new Date().getTime()
+    }, function (data, textStatus, jqXHR) {
         formDetailsJSON = data;
         $.each(data, function (i, v) {
             $('#comboForms').append($('<option>', {
