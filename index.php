@@ -1,4 +1,4 @@
-<?php include_once('partials/_header.php') ?>
+<?php include_once 'partials/_header.php' ?>
   <!-- /container -->
   <div class="container-fluid">
     <div class="row">
@@ -10,4 +10,4 @@
     <hr>
   </div>
   <!-- /container -->
-  <?php include_once('partials/_footer.php') ?>
+  <?php include_once 'partials/_footer.php' ?>

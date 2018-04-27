@@ -33,7 +33,7 @@
   <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -44,13 +44,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <?php $rootURL=dirname($_SERVER['PHP_SELF'])?>
-        <a class="navbar-brand" href="<?php echo $rootURL?>">Deloitte AppLoader <?php /*echo*/ $_SERVER['PHP_SELF']?></a>
+        <?php
+$rootURL = dirname($_SERVER['PHP_SELF']) ?>
+        <a class="navbar-brand"  href="<?php
+echo $rootURL ?>"><img src="img/d-logo.png" title="App loader Home" height="21"></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <div class="navbar-form navbar-right">
-          <?php if (strpos($_SERVER['PHP_SELF'],'index.php')!==false) {
-            ?>
+          <?php
+if (strpos($_SERVER['PHP_SELF'], 'index.php') !== false) { ?>
                 <div class="form-group">
                 <input type="text" placeholder="Filter" class="form-control txtFilter">
               </div>
@@ -69,14 +71,15 @@
                   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
               </button>
               </a>
-          <?php }else{ ?>
-              <a href="<?php echo $rootURL?>">
+          <?php
+} else { ?>
+              <a href="<?php echo $rootURL ?>">
                 <button title="Back" type="button" class="btn btn-success">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 </button>
               </a>
-          <?php } ?>
-          
+          <?php
+} ?>
         </div>
       </div>
       <!--/.navbar-collapse -->
